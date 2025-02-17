@@ -1,0 +1,143 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cardTwo {
+    position: relative;
+    top: 630px;
+
+    &__container {
+        width: 1440px;
+        margin: auto;
+    }
+
+    &__wrapper {
+        top: 100px;
+        text-align: center;
+    }
+
+    &__text {
+        position: absolute;
+        top: -1%;
+        font-weight: 600;
+        font-size: 19px;
+        left: 4%;
+    }
+
+    &__text2 {
+        position: absolute;
+        top: -1%;
+        right: 4%;
+        font-weight: 600;
+        font-size: 18px;
+        color: #006bff;
+    }
+
+    &__head {
+        padding-top: 30px;
+        display: grid;
+        margin: auto;
+        text-align: center;
+        margin-left: 20px;
+        gap: 35px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    &__title {
+        text-align: left;
+    }
+
+    &__old-price {
+        text-align: left;
+        text-decoration: line-through;
+        color: grey;
+    }
+
+    &__new-price {
+        text-align: left;
+        padding: 8px;
+        color: #006bff;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: -5px;
+    }
+
+    &__button {
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    &__data {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        width: 250px;
+        height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.025);
+        }
+    }
+
+    &__card {
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .cardTwo__img img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .cardTwo__title,
+    .cardTwo__old-price,
+    .cardTwo__new-price,
+    .cardTwo__button {
+        overflow: hidden;
+    }
+
+    &__star {
+        color: #fe7300;
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    &__btn {
+        background: #00000000;
+        border: 1px solid #fe7300;
+        border-radius: 6px;
+        padding: 5px 82px 5px 5px;
+    }
+
+    &__btn1 {
+        text-align: left;
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn3 {
+        background: blue;
+        border-radius: 6px;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    &__shop {
+        color: white;
+        background: #23c3b7;
+        padding: 8px 15px;
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,87 @@
+// admin.scss
+
+.admin-panel {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.admin-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.admin-panel input,
+.admin-panel textarea,
+.admin-panel button {
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-panel input[type="file"] {
+    padding: 0.5rem 0;
+}
+
+.admin-panel input[type="number"] {
+    -moz-appearance: textfield; // For Firefox to hide spinner
+    appearance: textfield; // Hides spinner in number input fields
+}
+
+.admin-panel button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-panel button:hover {
+    background-color: #0056b3;
+}
+
+.admin-panel label {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.admin-panel input:focus,
+.admin-panel textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.admin-panel textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.admin-panel div {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-panel .file-upload-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-panel .file-upload-container label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #333;
+}
