@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-const Home = () => {
+const HomeCards = () => {
     const [products, setProducts] = useState([]);
     const swiperRef = useRef(null);
 
@@ -123,4 +123,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomeCards;
