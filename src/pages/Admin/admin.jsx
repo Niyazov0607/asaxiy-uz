@@ -1,9 +1,10 @@
 import axios from "axios";
-import React from "react";
-import { toast } from "react-toastify"; // Ensure you have react-toastify installed
+import React, { useContext } from "react";
+import { toast } from "react-toastify";
 import "./admin.scss";
 
 const Admin = () => {
+    const { token } = useContext(ThemeContext);
     async function handleSubmit(e) {
         e.preventDefault();
 
@@ -16,6 +17,7 @@ const Admin = () => {
                 formData,
                 {
                     headers: {
+                        Authorization: "Bareer" + token,
                         "Content-Type": "multipart/form-data",
                     },
                 }

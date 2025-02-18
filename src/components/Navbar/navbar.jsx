@@ -9,6 +9,7 @@ import { CiWallet } from "react-icons/ci";
 import { FaTractor } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -96,7 +97,11 @@ const Navbar = () => {
                     </div>
                     <hr className="navbar__hr" />
                     <div className="navbar__info">
-                        <p className="navbar__li">Chegirmalar</p>
+                        <p>
+                            <NavLink className="navbar__li" to="/popular">
+                                Chegirmalar
+                            </NavLink>
+                        </p>
                         <p className="navbar__li">0-0-6</p>
                         <p className="navbar__li">Smartfonlar</p>
                         <p className="navbar__li">Maishiy texnika</p>
