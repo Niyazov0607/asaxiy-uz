@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./login.scss";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { ThemeContext } from "../../components/Contex/contex";
 
 const Login = () => {
     const navigate = useNavigate();
+    const { setToken } = useContext(ThemeContext);
+
     async function handleSubmit(e) {
         console.log("Submited", e.target[0].value, e.target[1].value);
         e.preventDefault();
@@ -15,6 +18,8 @@ const Login = () => {
             });
             const token = res.data?.data?.token;
             console.log(token);
+            setToken(token);
+            localStorage.setItem("token", token);
             navigate("/admin");
         } catch (error) {
             console.log(error);

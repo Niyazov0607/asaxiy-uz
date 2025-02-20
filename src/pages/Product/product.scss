@@ -1,0 +1,237 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product {
+    position: relative;
+    top: 250px;
+
+    &__container {
+        width: 1440px;
+        margin: auto;
+    }
+
+    &__wrapper {
+        top: 100px;
+        text-align: center;
+        display: flex;
+        gap: 50px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__newPrice {
+        text-align: left;
+        padding: 8px;
+        color: #006bff;
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    &__button {
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    &__category {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__data {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        width: 300px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        background: white;
+
+        &:hover {
+            transform: scale(1.025);
+        }
+    }
+
+    &__card {
+        text-align: center;
+    }
+
+    &__img {
+        width: 30%;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        padding: 30px 35px;
+        border-radius: 8px;
+    }
+
+    &__img img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .product__title,
+    .product__old-price,
+    .product__new-price,
+    .product__button {
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__star {
+        color: #fe7300;
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    &__btn {
+        background: #00000000;
+        border: 1px solid #fe7300;
+        border-radius: 6px;
+        padding: 5px 82px 5px 5px;
+    }
+
+    &__btn1 {
+        text-align: left;
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn3 {
+        background: rgba(0, 0, 255, 0);
+        border-radius: 6px;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        color: blue;
+        border: 1px solid blue;
+    }
+
+    &__shop {
+        color: white;
+        background: #23c3b7;
+        padding: 10px 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        width: 170px;
+        outline: none;
+        border: 2px solid #23c3b7;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__rate {
+        text-align: left;
+        padding-top: 10px;
+    }
+
+    &__like {
+        text-align: left;
+        padding: 10px 15px;
+        background: white;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+
+    &__months {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__disc-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__disc-btn {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: white;
+        background: #fe7300;
+        text-align: center;
+        border: none;
+        padding: 13px 65px;
+        border-radius: 8px;
+    }
+
+    &__card-name {
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    &__discount {
+        text-align: left;
+        padding: 5px 0;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    &__mon {
+        border: 1px solid grey;
+        padding: 5px 20px 5px 5px;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    &__mon:hover {
+        color: #006bff;
+        border: 1px solid #006bff;
+        background: #006aff42;
+        font-weight: bold;
+    }
+
+    &__smth {
+        background: white;
+        padding: 15px 20px;
+        height: 290px;
+        border-radius: 12px;
+    }
+
+    &__another-card {
+        border-radius: 6px;
+        border: 1px solid #006bff;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+
+    &__pri {
+        color: #fe7300;
+        font-weight: bold;
+    }
+
+    &__price-da {
+        font-weight: bold;
+    }
+}

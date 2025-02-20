@@ -76,7 +76,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 12px;
         width: 250px;
-        height: 470px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -94,10 +94,17 @@
         text-align: center;
         margin-left: 20px;
     }
+    .cardTwo__img {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
 
     .cardTwo__img img {
-        width: 100%;
         object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
     }
 
     .cardTwo__title,

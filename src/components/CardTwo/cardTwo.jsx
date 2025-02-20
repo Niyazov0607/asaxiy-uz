@@ -5,6 +5,7 @@ import ImgPhone from "../../assets/card-img.webp";
 import { FaStar } from "react-icons/fa6";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import HomeCards from "../../components/HomeCards/home";
+import { NavLink } from "react-router";
 
 const CardTwo = () => {
     const [products, setProducts] = useState([]);
@@ -33,16 +34,21 @@ const CardTwo = () => {
                         <div className="cardTwo__head">
                             {products.map((product, index) => (
                                 <div key={index} className="cardTwo__data">
-                                    <div className="cardTwo__img">
-                                        <img
-                                            width={120}
-                                            src={ImgPhone}
-                                            alt={product.name}
-                                        />
-                                    </div>
-                                    <h3 className="cardTwo__title">
-                                        {product.name}
-                                    </h3>
+                                    <NavLink to={"/product/" + product.id}>
+                                        <div className="cardTwo__img">
+                                            <img
+                                                width={120}
+                                                src={product.image}
+                                                alt={product.name}
+                                            />
+                                        </div>
+                                    </NavLink>
+                                    <NavLink to={"/product/" + product.id}>
+                                        <h3 className="cardTwo__title">
+                                            {product.name}
+                                        </h3>
+                                    </NavLink>
+
                                     <p className="cardTwo__star">
                                         <FaStar />
                                         <FaStar />

@@ -1,4 +1,131 @@
+li {
+    list-style: none;
+}
+
 .footer {
     position: relative;
     top: 700px;
+
+    &__container {
+        width: 1440px;
+        margin: auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__links {
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        color: gray;
+        padding: 5px 0;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    &__link2 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    &__banks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    &__channels {
+        display: flex;
+    }
+
+    &__title1 {
+        font-weight: 700;
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    &__link1 {
+        color: black;
+        display: flex;
+        background: #00000022;
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: 500;
+        gap: 10px;
+        width: 265px;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    &__arrow {
+        text-align: right;
+        margin-left: 22px;
+    }
+    &__arrows {
+        text-align: right;
+        margin-left: 40px;
+    }
+
+    &__link4 {
+        color: black;
+        display: flex;
+        background: #00000022;
+        padding: 15px 20px;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        gap: 10px;
+        width: 265px;
+        align-items: center;
+        border-radius: 8px;
+    }
+    &__link5 {
+        width: 265px;
+        color: black;
+        display: flex;
+        background: #00000022;
+        padding: 15px 20px;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        gap: 10px;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    &__payment {
+        background: #00000015;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 130px;
+        text-align: center;
+        border-radius: 8px;
+        height: auto;
+        height: 60px;
+    }
+
+    &__linkss {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__app {
+        color: grey;
+        padding-top: 10px;
+    }
+    &__app:hover {
+        color: blue;
+    }
+
+    &__channels {
+        gap: 15px;
+    }
 }

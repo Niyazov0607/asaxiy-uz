@@ -5,6 +5,7 @@ import Banner from "../Banner/banner";
 import HomeCards from "../HomeCards/home";
 import CardTwo from "../CardTwo/cardTwo";
 import Footer from "../Footer/footer";
+import Brand from "../Brand/brand";
 
 const Homepage = () => {
     return (
@@ -14,7 +15,8 @@ const Homepage = () => {
             <Banner />
             <HomeCards />
             <CardTwo />
-            <Footer/>
+            <Brand />
+            <Footer />
         </div>
     );
 };

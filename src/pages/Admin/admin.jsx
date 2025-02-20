@@ -2,14 +2,18 @@ import axios from "axios";
 import React, { useContext } from "react";
 import { toast } from "react-toastify";
 import "./admin.scss";
+import { ThemeContext } from "../../components/Contex/contex";
+import { Navigate } from "react-router";
 
 const Admin = () => {
     const { token } = useContext(ThemeContext);
+
     async function handleSubmit(e) {
         e.preventDefault();
 
         const formData = new FormData(e.target);
-        console.log(formData);
+
+        console.log("Form Data:", [...formData.entries()]);
 
         try {
             const res = await axios.post(
@@ -17,7 +21,7 @@ const Admin = () => {
                 formData,
                 {
                     headers: {
-                        Authorization: "Bareer" + token,
+                        Authorization: `Bearer ${token}`,
                         "Content-Type": "multipart/form-data",
                     },
                 }
@@ -26,11 +30,16 @@ const Admin = () => {
             console.log(res.data);
             toast.success("Successfully added the product!");
         } catch (error) {
-            console.error(error);
+            console.error("Request Error:", error);
             toast.error(
                 error?.response?.data?.message || "Something went wrong!"
             );
         }
+    }
+    console.log("Token:", token);
+    if (!token) {
+        toast.error("User is not authenticated. Please log in.");
+        return <Navigate to={"/login"} />;
     }
 
     return (
@@ -45,7 +54,6 @@ const Admin = () => {
                     placeholder="Product Name"
                     required
                 />
-
                 <input
                     type="text"
                     name="category"
@@ -53,7 +61,6 @@ const Admin = () => {
                     placeholder="Category"
                     required
                 />
-
                 <input
                     type="number"
                     name="price"
@@ -61,7 +68,6 @@ const Admin = () => {
                     placeholder="Price"
                     required
                 />
-
                 <textarea
                     name="description"
                     className="admin-textarea"
@@ -89,7 +95,6 @@ const Admin = () => {
                     placeholder="Stock Quantity"
                     required
                 />
-
                 <input
                     type="number"
                     name="rating"

@@ -3,6 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const ThemeContext = createContext(null);
 
 export const Context = ({ children }) => {
+    const [token, setToken] = useState(localStorage.getItem("token"));
     const [theme, setTheme] = useState(
         localStorage.getItem("theme") || "light"
     );
@@ -17,7 +18,7 @@ export const Context = ({ children }) => {
     };
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme, token, setToken }}>
             {children}
         </ThemeContext.Provider>
     );
