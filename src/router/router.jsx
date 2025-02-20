@@ -7,6 +7,7 @@ import Footer from "../components/Footer/footer";
 import Popular from "../pages/Popular/popular";
 import Login from "../pages/Login/login";
 import Product from "../pages/Product/product";
+import Cart from "../pages/Cart/cart";
 
 const Router = () => {
     return (
@@ -16,6 +17,7 @@ const Router = () => {
                 path="/product/:id"
                 element={<Product key={window.location.pathname} />}
             />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/login" element={<Login />} />
             <Route path="/about" element={<About />} />

@@ -58,6 +58,16 @@ a {
     //     }
     // }
 
+    &__counter {
+        position: absolute;
+        top: 10%;
+        right: 21%;
+        background: red;
+        border-radius: 50px;
+        padding: 0 6px;
+        color: white;
+    }
+
     &__humburger {
         display: flex;
         align-items: center;

@@ -4,6 +4,7 @@ export const ThemeContext = createContext(null);
 
 export const Context = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem("token"));
+    const [cart, setCart] = useState([]);
     const [theme, setTheme] = useState(
         localStorage.getItem("theme") || "light"
     );
@@ -18,7 +19,9 @@ export const Context = ({ children }) => {
     };
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme, token, setToken }}>
+        <ThemeContext.Provider
+            value={{ theme, toggleTheme, token, setToken, cart, setCart }}
+        >
             {children}
         </ThemeContext.Provider>
     );

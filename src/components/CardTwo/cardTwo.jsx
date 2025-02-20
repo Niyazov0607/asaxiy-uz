@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import "./cardTwo.scss";
 import ImgPhone from "../../assets/card-img.webp";
@@ -6,9 +6,11 @@ import { FaStar } from "react-icons/fa6";
 import { HiMiniShoppingCart } from "react-icons/hi2";
 import HomeCards from "../../components/HomeCards/home";
 import { NavLink } from "react-router";
+import { ThemeContext } from "../Contex/contex";
 
 const CardTwo = () => {
     const [products, setProducts] = useState([]);
+    const { setCart } = useContext(ThemeContext);
 
     useEffect(() => {
         async function productData() {
@@ -23,6 +25,17 @@ const CardTwo = () => {
         }
         productData();
     }, []);
+
+    function handleAddCart(product) {
+        console.log("Mahsulot qo'shildi:", product);
+        setCart((prev) => [
+            ...prev,
+            {
+                count: 1,
+                product: product,
+            },
+        ]);
+    }
 
     return (
         <>
@@ -73,7 +86,12 @@ const CardTwo = () => {
                                                 Hoziroq xarid qilish
                                             </button>
                                         </div>
-                                        <div className="cardTwo__shop">
+                                        <div
+                                            className="cardTwo__shop"
+                                            onClick={() =>
+                                                handleAddCart(product)
+                                            }
+                                        >
                                             <HiMiniShoppingCart />
                                         </div>
                                     </div>
